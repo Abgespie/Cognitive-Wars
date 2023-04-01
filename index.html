@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animations.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,800&display=swap" rel="stylesheet">
@@ -18,26 +18,26 @@
         <h1 class="start__title">
             КОГНИТИЫНЫЕ ВОЙНЫ
         </h1>
-        <button class="start-button" onclick="return startg();">
+        <button class="start-button" onclick="return start();">
             <span class="start-button__content">
                 НАЧАТЬ
             </span>
         </button>
     </div>
     <div class="main block-hidden block-disabled">
-    <div class="main-links">
-        <div class="main-links-tovideos" onclick="return tovideos();">
-            <p class="main-links-tovideos__desc">
-                Полезные видео
-            </p>
+        <div class="div">Здесь должен быть интерактив</div>
+        <div class="main-links">
+            <div class="main-links-tovideos" onclick="return tovideos();">
+                <p class="main-links-tovideos__desc">
+                    Полезные видео
+                </p>
+            </div>
+            <div class="main-links-totest" onclick="return totest();">
+                <p class="main-links-totest__desc">
+                    Тест на подверженность когнитивному воздействию
+                </p>
+            </div>
         </div>
-        <div class="main-links-totest" onclick="return totest();">
-            <p class="main-links-totest__desc">
-                Тест на подверженность когнитивному воздействию
-            </p>
-        </div>
-    </div>
-        
     </div>
     <div class="test block-hidden block-disabled">
         <div class="test-start">
@@ -61,13 +61,20 @@
     </div>
     <div class="videos block-hidden block-disabled">
         <div class="videos-video">
-            <div class="video--1">
-                <iframe src="https://vk.com/video_ext.php?oid=-50883936&id=456242000&hash=c7f722a05c0608cc" width="426" height="240" 
+            <div id="videos-video--1">
+                <p class="videos-video__desc">
+                    Когнитивные войны с Семёном Ураловым. 1 часть
+                </p>
+                <iframe id="video--1" src="https://vk.com/video_ext.php?oid=-50883936&id=456242000&hash=c7f722a05c0608cc" 
                 allow="autoplay; encrypted-media; fullscreen; picture-in-picture;" frameborder="0" allowfullscreen>
                 </iframe>
             </div>
-            <div class="video--2">
-
+            <div id="videos-video--2">
+                <p class="videos-video__desc">
+                    Когнитивные войны с Семёном Ураловым. 2 часть
+                </p>
+                <iframe id="video--2" src="https://vk.com/video_ext.php?oid=-50883936&id=456242030&hash=84fc81bcedaa05fe&hd=2" 
+                allow="autoplay; encrypted-media; fullscreen; picture-in-picture;" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
         <div class="videos-return">
@@ -78,6 +85,10 @@
                 К тесту
             </p>
         </div>
+    </div>
+    <div class="exit block-hidden block-disabled" onclick="return tostart();">
+        <div class="exit--left"></div>
+        <div class="exit--right"></div>
     </div>
     <script src="js/script.js"></script>
     <script src="js/animations.js"></script>
