@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,800&display=swap" rel="stylesheet">
+    <title>Когнитивные войны</title>
+</head>
+<body>
+    <div class="start">
+        <h1 class="start__title">
+            КОГНИТИЫНЫЕ ВОЙНЫ
+        </h1>
+        <button class="start-button" onclick="return startg();">
+            <span class="start-button__content">
+                НАЧАТЬ
+            </span>
+        </button>
+    </div>
+    <div class="main block-hidden block-disabled">
+    <div class="main-links">
+        <div class="main-links-tovideos" onclick="return tovideos();">
+            <p class="main-links-tovideos__desc">
+                Полезные видео
+            </p>
+        </div>
+        <div class="main-links-totest" onclick="return totest();">
+            <p class="main-links-totest__desc">
+                Тест на подверженность когнитивному воздействию
+            </p>
+        </div>
+    </div>
+        
+    </div>
+    <div class="test block-hidden block-disabled">
+        <div class="test-start">
+            <h2 class="test-start__title">
+                ТЕСТ НА ПОДВЕРЖЕННОСТЬ КОГНИТИВНОМУ ВОЗДЕЙСТВИЮ
+            </h2>
+            <button class="test-start-button">
+                <span class="test-start-button__content">
+                    НАЧАТЬ ТЕСТ
+                </span>
+            </button>
+            <div class="test-start-return">
+                <p class="test-start-return--main" onclick="return tomain();">
+                    Вернуться
+                </p>
+                <p class="test-start-return--videos" onclick="return tovideos();">
+                    К видео
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="videos block-hidden block-disabled">
+        <div class="videos-video">
+            <div class="video--1">
+                <iframe src="https://vk.com/video_ext.php?oid=-50883936&id=456242000&hash=c7f722a05c0608cc" width="426" height="240" 
+                allow="autoplay; encrypted-media; fullscreen; picture-in-picture;" frameborder="0" allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video--2">
+
+            </div>
+        </div>
+        <div class="videos-return">
+            <p class="videos-return--main" onclick="return tomain();">
+                Вернуться
+            </p>
+            <p class="videos-return--videos" onclick="return totest();">
+                К тесту
+            </p>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
