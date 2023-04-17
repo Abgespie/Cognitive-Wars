@@ -50,6 +50,96 @@ button {
     overflow: hidden;
     padding: 20px 0;
 }
+.main-game {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.main-game-corner {
+    background-color: #a9d5b2;
+    border: 2px solid #333333;
+    border-radius: 15px;
+    height: 80%;
+    width: 70%;
+    padding: 15px;
+}
+.main-game-corner__desc {
+    color: #333333;
+    font-size: 18px;
+}
+.main-game-nextbut, .main-inter-showbut {
+    margin: 0 35%;
+    /* max-width: 315px; */
+    padding: 20px 100px;
+    text-align: center;
+    background-color: #3d7c4d;
+    border-radius: 20px;
+    transition: all 0.6s ease;
+    box-shadow: 0px 0px 68px 3px rgba(10,157,91,0.76);
+}
+.main-game-nextbut:hover, .main-inter-showbut:hover {
+    background-color: #a9d5b2;
+    transition: all 0.6s ease;
+    color: #333333;
+    box-shadow: 0px 0px 0px 0px rgba(10,157,91,0.76);
+}
+.main-game-nextbut__content, .main-inter-showbut__content {
+    color: #e0e6cb;
+    transition: all 0.6s ease;
+}
+.main-game-nextbut:hover .main-game-nextbut__content, .main-inter-showbut:hover .main-inter-showbut__content {
+    color: #333333;
+    transition: all 0.6s ease;
+}
+.main-inter {
+    height: 100%;
+    padding: 15px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-inter__title {
+    text-align: center;
+}
+.main-inter-game {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between;
+    align-items: center; */
+}
+.main-inter-game-can {
+    width: 220px;
+    height: 220px;
+    background-color: #D3D3D3;
+    border-radius: 15px;
+    padding: 5px 15px;
+}
+.main-inter-game-can:not(:last-child) {
+    margin-right: 100px;
+}
+.main-inter-game-can__desc {
+    text-align: center;
+}
+.main-inter-objects {
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+}
+.main-inter-objects__obgect {
+    max-width: 100px;
+    max-height: 100px;
+    margin-left: 10px;
+    -moz-user-select: none;
+ -webkit-user-select: none;
+ -ms-user-select: none;
+ user-select: none;
+ -webkit-user-drag: none;
+ user-drag: none;
+ -webkit-touch-callout: none;
+}
 .main-links {
     display: flex;
     flex-direction: row;
