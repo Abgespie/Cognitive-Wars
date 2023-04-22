@@ -25,78 +25,118 @@
         </button>
     </div>
     <div class="main block-hidden block-disabled">
-        <div class="main-game">
-            <div class="main-game-corner">
-                <p class="main-game-corner__desc">
-                    Когнитивная война – это, простыми словами, сведение с ума. Она основана на зарождении чувства избранности 
-                    и радикализации отдельных групп населения и направлена на дестабилизацию общества как системы, изменение 
-                    не только того, что люди думают, но и того, как они действуют. Это наиболее продвинутая на сегодняшний день 
-                    форма манипулирования человеческим разумом.
-                </p>
-                <p class="main-game-corner__desc">
-                    Когнитивная война создает коварную проблему. У пораженного индивида разрушается обычное понимание и реакцию 
-                    на события постепенно и незаметно, что со временем оказывает значительное вредное воздействие. Она питается 
-                    методами дезинформации и пропаганды, направленными на психологическое истощение рецепторов информации. Какова 
-                    бы ни была природа и цель войны, она всегда сводится к столкновению человеческих воль, и поэтому то, что определяет 
-                    победу, – это способность навязать желаемое поведение на избранную аудиторию. Когнитивная война противостоит способности 
-                    знать и производить. Она активно препятствует знанию.
-                </p>
-                <p class="main-game-corner__desc">
-                    Механизм когнитивной войны основан на нерациональности общества потребления. В таком обществе для человека важно “не 
-                    добиться чего-либо, а купить новую машину”. Людьми превозносятся низменные ценности и игнорируются высшие. Обывателю 
-                    постоянно нужно нажимать на “дофаминовую педаль” – постоянно приносить себе удовольствие.
-                </p>
-                <p class="main-game-corner__desc">
-                    Основу когнитивной войны составляет информация.
-                    Человек живет в трех информационных действительностях: <br> 
-                    1.	Семья, работа <br> 
-                    2.	Традиционные медиа (Телевидение, СМИ) <br> 
-                    3.	Нетрадиционные или сетевые медиа (социальные сети, средства массовой коммуникации)
-                </p>
+        <div class="main-stage main--1">
+            <div class="main-game">
+                <div class="main-game-corner">
+                    <p class="main-game-corner__desc">
+                        Когнитивная война – это, простыми словами, сведение с ума. Она основана на зарождении чувства избранности 
+                        и радикализации отдельных групп населения и направлена на дестабилизацию общества как системы, изменение 
+                        не только того, что люди думают, но и того, как они действуют. Это наиболее продвинутая на сегодняшний день 
+                        форма манипулирования человеческим разумом.
+                    </p>
+                    <p class="main-game-corner__desc">
+                        Когнитивная война создает коварную проблему. У пораженного индивида разрушается обычное понимание и реакцию 
+                        на события постепенно и незаметно, что со временем оказывает значительное вредное воздействие. Она питается 
+                        методами дезинформации и пропаганды, направленными на психологическое истощение рецепторов информации. Какова 
+                        бы ни была природа и цель войны, она всегда сводится к столкновению человеческих воль, и поэтому то, что определяет 
+                        победу, – это способность навязать желаемое поведение на избранную аудиторию. Когнитивная война противостоит способности 
+                        знать и производить. Она активно препятствует знанию.
+                    </p>
+                    <p class="main-game-corner__desc">
+                        Механизм когнитивной войны основан на нерациональности общества потребления. В таком обществе для человека важно “не 
+                        добиться чего-либо, а купить новую машину”. Людьми превозносятся низменные ценности и игнорируются высшие. Обывателю 
+                        постоянно нужно нажимать на “дофаминовую педаль” – постоянно приносить себе удовольствие.
+                    </p>
+                    <p class="main-game-corner__desc">
+                        Основу когнитивной войны составляет информация.
+                        Человек живет в трех информационных действительностях: <br> 
+                        1.	Семья, работа <br> 
+                        2.	Традиционные медиа (Телевидение, СМИ) <br> 
+                        3.	Нетрадиционные или сетевые медиа (социальные сети, средства массовой коммуникации)
+                    </p>
+                </div>
+                <button class="main-game-nextbut" onclick="return togame()">
+                    <span class="main-game-nextbut__content">
+                        Продолжить
+                    </span>
+                </button>
             </div>
-            <button class="main-game-nextbut" onclick="return togame()">
-                <span class="main-game-nextbut__content">
-                    Продолжить
-                </span>
-            </button>
+            <div class="main-inter block-hidden block-disabled">
+                <h2 class="main-inter__title">
+                    Распределите источники информации по информационным действительностям
+                </h2>
+                <div class="main-inter-game">
+                    <div class="main-inter-game-can can--1">
+                        <p class="main-inter-game-can__desc">
+                            Семья, работа
+                        </p>
+                    </div>
+                    <div class="main-inter-game-can can--2">
+                        <p class="main-inter-game-can__desc">
+                            Традиционные медиа
+                        </p>
+                    </div>
+                    <div class="main-inter-game-can can--3">
+                        <p class="main-inter-game-can__desc">
+                            Сетевые медиа
+                        </p>
+                    </div>
+                </div>
+                <div class="main-inter-objects">
+                    <img src="./img/cnn.png" alt="" class="main-inter-objects__obgect" id="object--1" >
+                    <img src="./img/grl.png" alt="" class="main-inter-objects__obgect" id="object--2" >
+                    <img src="./img/par.png" alt="" class="main-inter-objects__obgect" id="object--3" >
+                    <img src="./img/peop.png" alt="" class="main-inter-objects__obgect" id="object--4" >
+                    <img src="./img/rt.png" alt="" class="main-inter-objects__obgect" id="object--5" >
+                    <img src="./img/tv.png" alt="" class="main-inter-objects__obgect" id="object--6" >
+                    <img src="./img/twitter.png" alt="" class="main-inter-objects__obgect" id="object--7" >
+                    <img src="./img/vk.png" alt="" class="main-inter-objects__obgect" id="object--8" >
+                    <img src="./img/youtube.png" alt="" class="main-inter-objects__obgect" id="object--9" >
+                </div>
+                <button class="main-inter-showbut" onclick="return todesc()">
+                    <span class="main-inter-showbut__content">
+                        Открыть текст
+                    </span>
+                </button>
+            </div>
         </div>
-        <div class="main-inter block-hidden block-disabled">
-            <h2 class="main-inter__title">
-                Распределите источники информации по информационным действительностям
-            </h2>
-            <div class="main-inter-game">
-                <div class="main-inter-game-can">
-                    <p class="main-inter-game-can__desc">
-                        Семья, работа
+        <div class="main-stage main--2 block-hidden block-disabled">
+            <div class="main-game--2">
+                <div class="main-game-corner">
+                    <p class="main-game-corner__desc">
+                        Когнитивная война – это, простыми словами, сведение с ума. Она основана на зарождении чувства избранности 
+                        и радикализации отдельных групп населения и направлена на дестабилизацию общества как системы, изменение 
+                        не только того, что люди думают, но и того, как они действуют. Это наиболее продвинутая на сегодняшний день 
+                        форма манипулирования человеческим разумом.
+                    </p>
+                    <p class="main-game-corner__desc">
+                        Когнитивная война создает коварную проблему. У пораженного индивида разрушается обычное понимание и реакцию 
+                        на события постепенно и незаметно, что со временем оказывает значительное вредное воздействие. Она питается 
+                        методами дезинформации и пропаганды, направленными на психологическое истощение рецепторов информации. Какова 
+                        бы ни была природа и цель войны, она всегда сводится к столкновению человеческих воль, и поэтому то, что определяет 
+                        победу, – это способность навязать желаемое поведение на избранную аудиторию. Когнитивная война противостоит способности 
+                        знать и производить. Она активно препятствует знанию.
+                    </p>
+                    <p class="main-game-corner__desc">
+                        Механизм когнитивной войны основан на нерациональности общества потребления. В таком обществе для человека важно “не 
+                        добиться чего-либо, а купить новую машину”. Людьми превозносятся низменные ценности и игнорируются высшие. Обывателю 
+                        постоянно нужно нажимать на “дофаминовую педаль” – постоянно приносить себе удовольствие.
+                    </p>
+                    <p class="main-game-corner__desc">
+                        Основу когнитивной войны составляет информация.
+                        Человек живет в трех информационных действительностях: <br> 
+                        1.	Семья, работа <br> 
+                        2.	Традиционные медиа (Телевидение, СМИ) <br> 
+                        3.	Нетрадиционные или сетевые медиа (социальные сети, средства массовой коммуникации)
                     </p>
                 </div>
-                <div class="main-inter-game-can">
-                    <p class="main-inter-game-can__desc">
-                        Традиционные медиа
-                    </p>
-                </div>
-                <div class="main-inter-game-can">
-                    <p class="main-inter-game-can__desc">
-                        Сетевые медиа
-                    </p>
-                </div>
+                <button class="main-game-nextbut" onclick="return togame2()">
+                    <span class="main-game-nextbut__content">
+                        Продолжить
+                    </span>
+                </button>
             </div>
-            <div class="main-inter-objects">
-                <img src="./img/cnn.png" alt="" class="main-inter-objects__obgect" id="object--1" >
-                <img src="./img/grl.png" alt="" class="main-inter-objects__obgect" id="object--2" >
-                <img src="./img/par.png" alt="" class="main-inter-objects__obgect" id="object--3" >
-                <img src="./img/peop.png" alt="" class="main-inter-objects__obgect" id="object--4" >
-                <img src="./img/rt.png" alt="" class="main-inter-objects__obgect" id="object--5" >
-                <img src="./img/tv.png" alt="" class="main-inter-objects__obgect" id="object--6" >
-                <img src="./img/twitter.png" alt="" class="main-inter-objects__obgect" id="object--7" >
-                <img src="./img/vk.png" alt="" class="main-inter-objects__obgect" id="object--8" >
-                <img src="./img/youtube.png" alt="" class="main-inter-objects__obgect" id="object--9" >
-            </div>
-            <button class="main-inter-showbut" onclick="return todesc()">
-                <span class="main-inter-showbut__content">
-                    Открыть текст
-                </span>
-            </button>
+
         </div>
         <div class="main-links">
             <div class="main-links-tovideos" onclick="return tovideos();">

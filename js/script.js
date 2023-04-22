@@ -21,9 +21,31 @@ function start() {
             showItem(document.getElementsByClassName('exit')[0]);
             break;
     }
+    setTimeout(() => {  
+        if(ob1.classList.contains('block-disabled')) {
+        ob1.classList.remove('block-disabled');
+        ob2.classList.remove('block-disabled');
+        ob3.classList.remove('block-disabled');
+        ob4.classList.remove('block-disabled');
+        ob5.classList.remove('block-disabled');
+        ob6.classList.remove('block-disabled');
+        ob7.classList.remove('block-disabled');
+        ob8.classList.remove('block-disabled');
+        ob9.classList.remove('block-disabled');
+        }
+    }, 750);
     
 }
 function tovideos() {
+    ob1.classList.add('block-disabled');
+    ob2.classList.add('block-disabled');
+    ob3.classList.add('block-disabled');
+    ob4.classList.add('block-disabled');
+    ob5.classList.add('block-disabled');
+    ob6.classList.add('block-disabled');
+    ob7.classList.add('block-disabled');
+    ob8.classList.add('block-disabled');
+    ob9.classList.add('block-disabled');
     if(document.getElementsByClassName('main')[0].classList.contains('block-hidden')) {
         hideItem(document.getElementsByClassName('test')[0]);
         showItem(document.getElementsByClassName('videos')[0]);
@@ -35,6 +57,15 @@ function tovideos() {
     
 }
 function totest() {
+    ob1.classList.add('block-disabled');
+    ob2.classList.add('block-disabled');
+    ob3.classList.add('block-disabled');
+    ob4.classList.add('block-disabled');
+    ob5.classList.add('block-disabled');
+    ob6.classList.add('block-disabled');
+    ob7.classList.add('block-disabled');
+    ob8.classList.add('block-disabled');
+    ob9.classList.add('block-disabled');
     if(document.getElementsByClassName('main')[0].classList.contains('block-hidden')) {
         hideItem(document.getElementsByClassName('videos')[0]);
         showItem(document.getElementsByClassName('test')[0]);
@@ -53,8 +84,30 @@ function tomain() {
         hideItem(document.getElementsByClassName('test')[0]);
         showItem(document.getElementsByClassName('main')[0]);
     }
+    setTimeout(() => {  
+        if(ob1.classList.contains('block-disabled')) {
+        ob1.classList.remove('block-disabled');
+        ob2.classList.remove('block-disabled');
+        ob3.classList.remove('block-disabled');
+        ob4.classList.remove('block-disabled');
+        ob5.classList.remove('block-disabled');
+        ob6.classList.remove('block-disabled');
+        ob7.classList.remove('block-disabled');
+        ob8.classList.remove('block-disabled');
+        ob9.classList.remove('block-disabled');
+        }
+    }, 750);
 }
 function tostart() {
+    ob1.classList.add('block-disabled');
+    ob2.classList.add('block-disabled');
+    ob3.classList.add('block-disabled');
+    ob4.classList.add('block-disabled');
+    ob5.classList.add('block-disabled');
+    ob6.classList.add('block-disabled');
+    ob7.classList.add('block-disabled');
+    ob8.classList.add('block-disabled');
+    ob9.classList.add('block-disabled');
     if(document.getElementsByClassName('videos')[0].classList.contains('block-hidden') && document.getElementsByClassName('main')[0].classList.contains('block-hidden')) {
         hideItem(document.getElementsByClassName('test')[0]);
         hideItem(document.getElementsByClassName('exit')[0]);
@@ -75,6 +128,7 @@ function tostart() {
             prev = 2;
         }
     }
+    
 }
 
 //game
@@ -82,10 +136,33 @@ function tostart() {
 function togame() {
     hideItem(document.getElementsByClassName('main-game')[0]);
     showItem(document.getElementsByClassName('main-inter')[0]);
+    setTimeout(() => {  
+        if(ob1.classList.contains('block-disabled')) {
+        ob1.classList.remove('block-disabled');
+        ob2.classList.remove('block-disabled');
+        ob3.classList.remove('block-disabled');
+        ob4.classList.remove('block-disabled');
+        ob5.classList.remove('block-disabled');
+        ob6.classList.remove('block-disabled');
+        ob7.classList.remove('block-disabled');
+        ob8.classList.remove('block-disabled');
+        ob9.classList.remove('block-disabled');
+        }
+    }, 750);
 }
 function todesc() {
+    ob1.classList.add('block-disabled');
+    ob2.classList.add('block-disabled');
+    ob3.classList.add('block-disabled');
+    ob4.classList.add('block-disabled');
+    ob5.classList.add('block-disabled');
+    ob6.classList.add('block-disabled');
+    ob7.classList.add('block-disabled');
+    ob8.classList.add('block-disabled');
+    ob9.classList.add('block-disabled');
     hideItem(document.getElementsByClassName('main-inter')[0]);
     showItem(document.getElementsByClassName('main-game')[0]);
+    
 }
 
 // var ob1 = document.getElementById
@@ -98,12 +175,30 @@ var ob6 = document.getElementById('object--6');
 var ob7 = document.getElementById('object--7');
 var ob8 = document.getElementById('object--8');
 var ob9 = document.getElementById('object--9');
+var box1 = document.getElementsByClassName('can--1')[0];
+var box2 = document.getElementsByClassName('can--2')[0];
+var box3 = document.getElementsByClassName('can--3')[0];
+var cmpl = 0;
+doright = function(el1, el2) {
+    el1.offsetBottom = el1.offsetTop + el1.offsetHeight;
+    el1.offsetRight = el1.offsetLeft + el1.offsetWidth;
+    el2.offsetBottom = el2.offsetTop + el2.offsetHeight;
+    el2.offsetRight = el2.offsetLeft + el2.offsetWidth;
+
+    return !((el1.offsetBottom < el2.offsetTop) ||
+            (el1.offsetTop > el2.offsetBottom) ||
+            (el1.offsetRight < el2.offsetLeft) ||
+            (el1.offsetLeft > el2.offsetRight))
+};
+
 
 ob1.onmousedown = function(e) {
 
     var coords = getCoords(ob1);
     var shiftX = e.pageX - coords.left;
     var shiftY = e.pageY - coords.top;
+    var sx = 0;
+    var sy = 0;
     
     ob1.style.position = 'absolute';
     document.body.appendChild(ob1);
@@ -112,6 +207,8 @@ ob1.onmousedown = function(e) {
     ob1.style.zIndex = 1000; // над другими элементами
     
     function moveAt(e) {
+        sx += shiftX;
+        sy += shiftY;
         ob1.style.left = e.pageX - shiftX + 'px';
         ob1.style.top = e.pageY - shiftY + 'px';
     }
@@ -123,6 +220,12 @@ ob1.onmousedown = function(e) {
     ob1.onmouseup = function() {
         document.onmousemove = null;
         ob1.onmouseup = null;
+        if(doright(ob1, box2)) {
+            ob1.classList.add('block-hidden');
+            box2.classList.add('can--right');
+            setTimeout(() => {  ob1.remove(); box2.classList.remove('can--right');}, 600);
+            cmpl++;
+        }
     };
     
     }
@@ -154,6 +257,12 @@ ob2.onmousedown = function(e) {
     ob2.onmouseup = function() {
         document.onmousemove = null;
         ob2.onmouseup = null;
+        if(doright(ob2, box1)) {
+            ob2.classList.add('block-hidden');
+            box1.classList.add('can--right');
+            setTimeout(() => {  ob2.remove(); box1.classList.remove('can--right');}, 600);
+            cmpl++;
+        }
     };
     
     }
@@ -185,6 +294,12 @@ ob3.onmousedown = function(e) {
     ob3.onmouseup = function() {
         document.onmousemove = null;
         ob3.onmouseup = null;
+        if(doright(ob3, box1)) {
+            ob3.classList.add('block-hidden');
+            box1.classList.add('can--right');
+            setTimeout(() => {  ob3.remove(); box1.classList.remove('can--right');}, 600);
+            cmpl++
+        }
     };
     
     }
@@ -216,6 +331,12 @@ ob4.onmousedown = function(e) {
     ob4.onmouseup = function() {
         document.onmousemove = null;
         ob4.onmouseup = null;
+        if(doright(ob4, box1)) {
+            ob4.classList.add('block-hidden');
+            box1.classList.add('can--right');
+            setTimeout(() => {  ob4.remove(); box1.classList.remove('can--right');}, 600);
+            cmpl++;
+        }
     };
     
     }
@@ -247,6 +368,12 @@ ob5.onmousedown = function(e) {
     ob5.onmouseup = function() {
         document.onmousemove = null;
         ob5.onmouseup = null;
+        if(doright(ob5, box2)) {
+            ob5.classList.add('block-hidden');
+            box2.classList.add('can--right');
+            setTimeout(() => {  ob5.remove(); box2.classList.remove('can--right');}, 600);
+            cmpl++;
+        }
     };
     
     }
@@ -278,6 +405,12 @@ ob6.onmousedown = function(e) {
     ob6.onmouseup = function() {
         document.onmousemove = null;
         ob6.onmouseup = null;
+        if(doright(ob6, box2)) {
+            ob6.classList.add('block-hidden');
+            box2.classList.add('can--right');
+            setTimeout(() => {  ob6.remove(); box2.classList.remove('can--right');}, 600);
+            cmpl++;
+        }
     };
     
     }
@@ -309,6 +442,12 @@ ob7.onmousedown = function(e) {
     ob7.onmouseup = function() {
         document.onmousemove = null;
         ob7.onmouseup = null;
+        if(doright(ob7, box3)) {
+            ob7.classList.add('block-hidden');
+            box3.classList.add('can--right');
+            setTimeout(() => {  ob7.remove(); box3.classList.remove('can--right');}, 600);
+            cmpl++;
+        }
     };
     
     }
@@ -340,6 +479,12 @@ ob9.onmousedown = function(e) {
     ob9.onmouseup = function() {
         document.onmousemove = null;
         ob9.onmouseup = null;
+        if(doright(ob9, box3)) {
+            ob9.classList.add('block-hidden');
+            box3.classList.add('can--right');
+            setTimeout(() => {  ob9.remove(); box3.classList.remove('can--right');}, 600);
+            cmpl++;
+        }
     };
     
     }
@@ -371,6 +516,12 @@ ob8.onmousedown = function(e) {
     ob8.onmouseup = function() {
         document.onmousemove = null;
         ob8.onmouseup = null;
+        if(doright(ob8, box3)) {
+            ob8.classList.add('block-hidden');
+            box3.classList.add('can--right');
+            setTimeout(() => {  ob8.remove(); box3.classList.remove('can--right');}, 600);
+            cmpl++;
+        }
     };
     
     }
@@ -386,3 +537,11 @@ function getCoords(elem) {   // кроме IE8-
     left: box.left + pageXOffset
     };
 }
+var main1 = setInterval(() => {  
+    if(cmpl == 9) {
+        hideItem(document.getElementsByClassName('main--1')[0]);
+        showItem(document.getElementsByClassName('main--2')[0]);
+        clearInterval(main1);
+    }
+}, 1000);
+
