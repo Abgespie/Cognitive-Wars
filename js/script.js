@@ -164,6 +164,24 @@ function todesc() {
     showItem(document.getElementsByClassName('main-game')[0]);
     
 }
+function togame2() {
+    hideItem(document.getElementsByClassName('main-game--2')[0]);
+    showItem(document.getElementsByClassName('main-inter--2')[0]);
+}
+function todesc2() {
+    hideItem(document.getElementsByClassName('main-inter--2')[0]);
+    showItem(document.getElementsByClassName('main-game--2')[0]);
+    
+}
+function togame3() {
+    hideItem(document.getElementsByClassName('main-game--3')[0]);
+    showItem(document.getElementsByClassName('main-inter--3')[0]);
+}
+function todesc3() {
+    hideItem(document.getElementsByClassName('main-inter--3')[0]);
+    showItem(document.getElementsByClassName('main-game--3')[0]);
+    
+}
 
 // var ob1 = document.getElementById
 var ob1 = document.getElementById('object--1');
@@ -178,7 +196,7 @@ var ob9 = document.getElementById('object--9');
 var box1 = document.getElementsByClassName('can--1')[0];
 var box2 = document.getElementsByClassName('can--2')[0];
 var box3 = document.getElementsByClassName('can--3')[0];
-var cmpl = 0;
+var cmpl = 9;
 doright = function(el1, el2) {
     el1.offsetBottom = el1.offsetTop + el1.offsetHeight;
     el1.offsetRight = el1.offsetLeft + el1.offsetWidth;
@@ -545,3 +563,102 @@ var main1 = setInterval(() => {
     }
 }, 1000);
 
+// inter 2
+
+var cntint2 = 7;
+var int2but1 = document.getElementsByClassName('2--button--1')[0];
+var int2but2 = document.getElementsByClassName('2--button--2')[0];
+var curit = document.getElementsByClassName('main-inter--2-objects--object');
+
+function intb2_1() {
+    if(cntint2 % 2 == 0) {
+        int2but1.classList.add('main-inter--2-button--right');
+        hideItem(curit[cntint2 - 1]);
+        showItem(curit[cntint2]);
+        cntint2++;
+        setTimeout(() => {  
+            int2but1.classList.remove('main-inter--2-button--right');
+        }, 1000);
+    }
+    else {
+        int2but1.classList.add('main-inter--2-button--wrong');
+        setTimeout(() => {  
+            int2but1.classList.remove('main-inter--2-button--wrong');
+        }, 2000);
+    }
+}
+function intb2_2() {
+    if(cntint2 % 2 != 0) {
+        int2but2.classList.add('main-inter--2-button--right');
+        hideItem(curit[cntint2 - 1]);
+        showItem(curit[cntint2]);
+        cntint2++;
+        setTimeout(() => {  
+            int2but2.classList.remove('main-inter--2-button--right');
+        }, 1000);
+    }
+    else {
+        int2but2.classList.add('main-inter--2-button--wrong');
+        setTimeout(() => {  
+            int2but2.classList.remove('main-inter--2-button--wrong');
+        }, 2000);
+    }
+}
+
+var main2 = setInterval(() => {  
+    if(cntint2 == 7) {
+        hideItem(document.getElementsByClassName('main--2')[0]);
+        showItem(document.getElementsByClassName('main--3')[0]);
+        clearInterval(main2);
+    }
+}, 1000);
+
+//inter 3
+
+var cntint3 = 7;
+var int3but1 = document.getElementsByClassName('3--button--1')[0];
+var int3but2 = document.getElementsByClassName('3--button--2')[0];
+var curit = document.getElementsByClassName('main-inter--3-objects--object');
+
+function intb3_1() {
+    if(cntint3 % 2 != 0) {
+        int3but1.classList.add('main-inter--2-button--right');
+        hideItem(curit[cntint3 - 1]);
+        showItem(curit[cntint3]);
+        cntint3++;
+        setTimeout(() => {  
+            int3but1.classList.remove('main-inter--2-button--right');
+        }, 1000);
+    }
+    else {
+        int3but1.classList.add('main-inter--2-button--wrong');
+        setTimeout(() => {  
+            int3but1.classList.remove('main-inter--2-button--wrong');
+        }, 2000);
+    }
+}
+function intb3_2() {
+    if(cntint3 % 2 == 0) {
+        int3but2.classList.add('main-inter--2-button--right');
+        hideItem(curit[cntint3 - 1]);
+        showItem(curit[cntint3]);
+        cntint3++;
+        setTimeout(() => {  
+            int3but2.classList.remove('main-inter--2-button--right');
+        }, 1000);
+    }
+    else {
+        int3but2.classList.add('main-inter--2-button--wrong');
+        setTimeout(() => {  
+            int3but2.classList.remove('main-inter--2-button--wrong');
+        }, 2000);
+    }
+}
+
+var main3 = setInterval(() => {  
+    if(cntint3 == 7) {
+        hideItem(document.getElementsByClassName('main--3')[0]);
+        showItem(document.getElementsByClassName('main--4')[0]);
+        clearInterval(main3);
+    }
+}, 1000);
