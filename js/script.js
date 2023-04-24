@@ -196,7 +196,7 @@ var ob9 = document.getElementById('object--9');
 var box1 = document.getElementsByClassName('can--1')[0];
 var box2 = document.getElementsByClassName('can--2')[0];
 var box3 = document.getElementsByClassName('can--3')[0];
-var cmpl = 9;
+var cmpl = 0;
 doright = function(el1, el2) {
     el1.offsetBottom = el1.offsetTop + el1.offsetHeight;
     el1.offsetRight = el1.offsetLeft + el1.offsetWidth;
@@ -565,7 +565,7 @@ var main1 = setInterval(() => {
 
 // inter 2
 
-var cntint2 = 7;
+var cntint2 = 1;
 var int2but1 = document.getElementsByClassName('2--button--1')[0];
 var int2but2 = document.getElementsByClassName('2--button--2')[0];
 var curit = document.getElementsByClassName('main-inter--2-objects--object');
@@ -615,16 +615,17 @@ var main2 = setInterval(() => {
 
 //inter 3
 
-var cntint3 = 7;
+var cntint3 = 1;
 var int3but1 = document.getElementsByClassName('3--button--1')[0];
 var int3but2 = document.getElementsByClassName('3--button--2')[0];
-var curit = document.getElementsByClassName('main-inter--3-objects--object');
+var curit = document.getElementsByClassName('main-inter--2-objects--object');
+var curit2 = document.getElementsByClassName('main-inter--3-objects--object');
 
 function intb3_1() {
     if(cntint3 % 2 != 0) {
         int3but1.classList.add('main-inter--2-button--right');
-        hideItem(curit[cntint3 - 1]);
-        showItem(curit[cntint3]);
+        hideItem(curit2[cntint3 - 1]);
+        showItem(curit2[cntint3]);
         cntint3++;
         setTimeout(() => {  
             int3but1.classList.remove('main-inter--2-button--right');
@@ -640,8 +641,8 @@ function intb3_1() {
 function intb3_2() {
     if(cntint3 % 2 == 0) {
         int3but2.classList.add('main-inter--2-button--right');
-        hideItem(curit[cntint3 - 1]);
-        showItem(curit[cntint3]);
+        hideItem(curit2[cntint3 - 1]);
+        showItem(curit2[cntint3]);
         cntint3++;
         setTimeout(() => {  
             int3but2.classList.remove('main-inter--2-button--right');
@@ -662,3 +663,8 @@ var main3 = setInterval(() => {
         clearInterval(main3);
     }
 }, 1000);
+
+function toend() {
+    hideItem(document.getElementsByClassName('main--4')[0]);
+    showItem(document.getElementsByClassName('main--5')[0]);
+}
