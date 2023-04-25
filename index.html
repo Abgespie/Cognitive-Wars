@@ -168,7 +168,7 @@
                         </div>
                         <div class="main-inter--2-objects--object object2--5 block-hidden block-disabled">
                             <p class="object2__desc">
-                                Деятельность экстремистской организации "ФБК" 
+                                Деятельность экстремистской организации "ФБК", запрещенной на территории РФ
                             </p>
                             <img src="./img/fbk.jpg" alt="" class="object2__img">
                         </div>
@@ -342,7 +342,7 @@
             <h2 class="test-start__title">
                 ТЕСТ НА ПОДВЕРЖЕННОСТЬ КОГНИТИВНОМУ ВОЗДЕЙСТВИЮ
             </h2>
-            <button class="test-start-button">
+            <button class="test-start-button" onclick="return tststrt();">
                 <span class="test-start-button__content">
                     НАЧАТЬ ТЕСТ
                 </span>
@@ -356,6 +356,78 @@
                 </p>
             </div>
         </div>
+        <div class="test-act block-hidden block-disabled">
+            <div class="test-act-quests">
+                <p class="test-act-quest__desc quest--1">
+                    Вы эмоциональный человек.
+                </p>
+                <p class="test-act-quest__desc quest--2 block-hidden block-disabled">
+                    Новости вызывают у Вас сильные эмоции.
+                </p>
+                <p class="test-act-quest__desc quest--3 block-hidden block-disabled">
+                    Вы часто делает что-то на эмоциях, не подумав.
+                </p>
+                <p class="test-act-quest__desc quest--4 block-hidden block-disabled">
+                    Вы часто спорите с родными и знакомыми из-за разности во взглядах.
+                </p>
+                <p class="test-act-quest__desc quest--5 block-hidden block-disabled">
+                    Вы выплёскиваете свои эмоции на окружающих, даже если они негативные.
+                </p>
+                <p class="test-act-quest__desc quest--6 block-hidden block-disabled">
+                    Ваши эмоции преобладают над чувствами (чувства длительны, а эмоции кратковремены).
+                </p>
+                <p class="test-act-quest__desc quest--7 block-hidden block-disabled">
+                    Вы привыкли доверять новостным заголовкам.
+                </p>
+                <p class="test-act-quest__desc quest--8 block-hidden block-disabled">
+                    Вы никогда не проверяете информацию.
+                </p>
+                <p class="test-act-quest__desc quest--9 block-hidden block-disabled">
+                    У вас нет чёткой позиции по многим вещам.
+                </p>
+                <p class="test-act-quest__desc quest--10 block-hidden block-disabled">
+                    Ваше мнение формируют авторитеты.
+                </p>
+                <p class="test-act-quest__desc quest--11 block-hidden block-disabled">
+                    Новости часто вызывают у вас желание к действию.
+                </p>
+                <p class="test-act-quest__desc quest--12 block-hidden block-disabled">
+                    Вы предпочитаете смотреть видео в интернете, а чтение книг вам неинтересно.
+                </p>
+            </div>
+            <div class="test-act-buttons">
+                <p class="test-act-buttons__button button--1" onclick="return answr(3);">
+                    Да
+                </p>
+                <p class="test-act-buttons__button button--2" onclick="return answr(2);">
+                    Скорее да
+                </p>
+                <p class="test-act-buttons__button button--3" onclick="return answr(1);">
+                    Скорее нет
+                </p>
+                <p class="test-act-buttons__button button--4" onclick="return answr(0);">
+                    Нет
+                </p>
+            </div>
+        </div>
+        <div class="test-res block-hidden block-disabled">
+            <p class="test-res__desc res--verybad block-hidden block-disabled">
+                Вы сильно подвержены когнитивному воздействию и вами легко управлять. Чтобы научиться противостоять воздейсвию на вас, попробуйте побольше узнать о 
+                когнитивных войнах и начните читать длинные литературные произведения. Разыивайте рациональное мышление и проверяйте информацию в новостных заголовках, 
+                она часто оказывается ложной или правдивой лишь на половину.
+            </p>
+            <p class="test-res__desc res--bad block-hidden block-disabled">
+                Вы в зоне риска. На Вас не так просто повлиять, однако вам стоит поработать над рационализацией мышления и лучше ознакомиться с темой когнитивных войн.
+            </p>
+            <p class="test-res__desc res--norm block-hidden block-disabled">
+                Вы слабо подвержены когнитивному воздействию. Вам стоит еще немного порабоать над собой, чтобы стать полдностью невосприимчивым к когнитивному воздейсвию.
+            </p>
+            <p class="test-res__desc res--good block-hidden block-disabled">
+                Поздравляем! Вы почти не подвержены когнитивному воздействию, Вы не позволяетсе другим управлять Вами с помощью эмоций и лжи.
+            </p>
+        </div>
+        
+
     </div>
     <div class="videos block-hidden block-disabled">
         <div class="videos-video">

@@ -668,3 +668,32 @@ function toend() {
     hideItem(document.getElementsByClassName('main--4')[0]);
     showItem(document.getElementsByClassName('main--5')[0]);
 }
+
+// test 
+var res = 0;
+var quest = 0;
+function tststrt() {
+    hideItem(document.getElementsByClassName('test-start')[0]);
+    showItem(document.getElementsByClassName('test-act')[0]);
+}
+function answr(point) {
+    if(quest == 11) {
+        hideItem(document.getElementsByClassName('test-act')[0]);
+        showItem(document.getElementsByClassName('test-res')[0]);
+        if(res < 10) {
+            showItem(document.getElementsByClassName('res--good')[0]);
+        } else if(res < 19 && res > 9) {
+            showItem(document.getElementsByClassName('res--norm')[0]);
+        } else if(res < 28 && res > 18) {
+            showItem(document.getElementsByClassName('res--bad')[0]);
+        } else if(res > 27) {
+            showItem(document.getElementsByClassName('res--verybad')[0]);
+        }
+    }
+    console.log(res);
+    res += point;
+    hideItem(document.getElementsByClassName('test-act-quest__desc')[quest]);
+    showItem(document.getElementsByClassName('test-act-quest__desc')[quest + 1]);
+    quest++;
+
+}
